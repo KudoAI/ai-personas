@@ -98,7 +98,7 @@ jobs:
               "https://api.github.com/repos/$TARGET_REPO/releases/tags/$TARGET_RELEASE_TAG")
             upload_url=$(echo "$get_release_resp" | sed -nE 's|.*"upload_url": "(.*)".*|\1|p' | sed 's|{.*}||')
           fi
-          
+
           echo "Uploading assets to release..."
           if [ -z "$upload_url" ] ; then
             echo "ERROR: Could not get upload URL. Skipping asset upload."
