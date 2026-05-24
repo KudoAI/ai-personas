@@ -10,18 +10,14 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       contents: read
-
     steps:
-      - name: Generate KSB token
-        id: ksb-token
+      - id: ksb-token
         uses: actions/create-github-app-token@v3.2.0
         with:
           client-id: ${{ secrets.KSB_APP_ID }}
           private-key: ${{ secrets.KSB_PRIVATE_KEY }}
           owner: adamlui
-
-      - name: Sync release to adamlui/<js|python>-utils
-        run: |
+      - run: |
           RELEASE_TITLE="${{ github.event.release.name }}"
           RELEASE_TAG="${{ github.event.release.tag_name }}"
           echo "Source Title: $RELEASE_TITLE"
