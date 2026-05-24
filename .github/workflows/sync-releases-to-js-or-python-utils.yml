@@ -52,15 +52,6 @@ jobs:
             echo "Release does not exist"
           fi
 
-          # Download assets
-          if [[ "${{ github.event.action }}" == "published" ]] ; then
-            download_urls=$(echo "$RELEASE_JSON" | grep -o '"browser_download_url": ".*"' | cut -d '"' -f 4)
-            for url in $download_urls ; do
-              echo -e "Downloading $(basename "$url")..."
-              curl -LOs "$url"
-            done
-          fi
-
           # Append auto-sync trailer
           RELEASE_NOTES+="\n\n###### _Auto-synced from https://github.com/KudoAI/ai-personas/releases"
           RELEASE_NOTES+=" by [@kudo-sync-bot](https://github.com/kudo-sync-bot)_"
@@ -95,23 +86,6 @@ jobs:
             get_release_resp=$(curl -s -S -H "Authorization: Bearer ${{ steps.ksb-token.outputs.token }}" \
               "https://api.github.com/repos/$TARGET_REPO/releases/tags/$TARGET_RELEASE_TAG")
             upload_url=$(echo "$get_release_resp" | sed -nE 's|.*"upload_url": "(.*)".*|\1|p' | sed 's|{.*}||')
-          fi
-
-          if [[ "${{ github.event.action }}" == "published" ]] ; then
-            echo "Uploading assets to release..."
-            if [ -z "$upload_url" ] ; then
-              echo "ERROR: Could not get upload URL. Skipping asset upload."
-            else
-              for url in $download_urls ; do
-                filename=$(basename "$url")
-                echo "Uploading $filename..."
-                curl -s -S --data-binary @"$filename" \
-                    -H "Authorization: Bearer ${{ steps.ksb-token.outputs.token }}" \
-                    -H "Content-Type: application/octet-stream" \
-                    "$upload_url?name=$filename" \
-                      > /dev/null 2>&1
-              done
-            fi
           fi
 
           echo "Release synced to $TARGET_REPO ($TARGET_RELEASE_TAG)!"
