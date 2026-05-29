@@ -29,7 +29,7 @@ It's just a [JSON file](https://cdn.jsdelivr.net/npm/@kudoai/ai-personas@1.3.0/d
 
 ## ⚡ Installation
 
-#### <a href="#-nodejs"><img height=14 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@dbdea4b/assets/images/icons/runtimes/node.js/icon25x28.png"></a> Node.js:
+#### <a href="#-nodejs"><img height=14 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@a837dec/assets/images/icons/runtimes/node.js/icon25x28.png"></a> Node.js:
 
 From your project root:
 
@@ -54,7 +54,7 @@ npm install @kudoai/ai-personas
 
 ## 🔌 Usage
 
-#### <a href="#-es-modules-esm"><img height=13 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@dbdea4b/assets/images/icons/module-systems/esm/icon32.png"></a> ES Modules (ESM):
+#### <a href="#-es-modules-esm"><img height=13 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@a837dec/assets/images/icons/module-systems/esm/icon32.png"></a> ES Modules (ESM):
 
 ```js
 import personas from '@kudoai/ai-personas'
@@ -63,7 +63,7 @@ console.log(personas['Linux Terminal'].prompt)
 // => I want you to act as a linux terminal. I will type commands and you will...
 ```
 
-#### <a href="#-commonjs-cjs"><img height=13 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@dbdea4b/assets/images/icons/module-systems/cjs/icon32.png"></a> CommonJS (CJS):
+#### <a href="#-commonjs-cjs"><img height=13 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@a837dec/assets/images/icons/module-systems/cjs/icon32.png"></a> CommonJS (CJS):
 
 ```js
 const personas = require('@kudoai/ai-personas')

@@ -281,7 +281,7 @@ All contributions are very welcome!
 
 #### 🤖 ai-personas (Node.js)
 
-> [<img height=14 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@dbdea4b/assets/images/icons/runtimes/node.js/icon25x28.png">][ap-node.js-install]
+> [<img height=14 width="auto" src="https://cdn.jsdelivr.net/gh/adamlui/js-utils@a837dec/assets/images/icons/runtimes/node.js/icon25x28.png">][ap-node.js-install]
 > [Install][ap-node.js-install] /
 > [<picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/userscripts@13443c3/assets/images/icons/paper-sheet/white.svg"><img height="13" src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@13443c3/assets/images/icons/paper-sheet/black.svg"></picture>][ap-node.js-readme]
 > [Readme][ap-node.js-readme] /
