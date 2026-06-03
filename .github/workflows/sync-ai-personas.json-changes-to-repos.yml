@@ -17,21 +17,21 @@ jobs:
     steps:
 
       - name: Checkout KudoAI/ai-personas
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           path: KudoAI/ai-personas
           fetch-depth: 2
 
       - name: Checkout adamlui/js-utils
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/js-utils
           path: adamlui/js-utils
 
       - name: Checkout adamlui/python-utils
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/python-utils
