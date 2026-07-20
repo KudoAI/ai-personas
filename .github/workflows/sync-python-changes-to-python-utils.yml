@@ -17,13 +17,13 @@ jobs:
     steps:
 
       - name: Checkout KudoAI/ai-personas
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           path: KudoAI/ai-personas
 
       - name: Checkout adamlui/python-utils
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/python-utils
