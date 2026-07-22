@@ -19,4 +19,4 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: |
           cd node.js
-          npm ci && npm run build && npm publish --provenance
+          npm ci --ignore-scripts && npm run build && npm publish --provenance

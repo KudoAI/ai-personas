@@ -21,7 +21,7 @@ jobs:
         run: pip install --only-binary :all: -r requirements-dev.txt
 
       - name: Install Node.js dependencies
-        run: cd node.js && npm ci
+        run: cd node.js && npm ci --ignore-scripts
 
       - name: Lint all files
         run: nox -s lint-all
