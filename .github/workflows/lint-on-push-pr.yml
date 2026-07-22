@@ -18,7 +18,7 @@ jobs:
           python-version: 3.x
 
       - name: Install Py dependencies
-        run: pip install -r requirements-dev.txt
+        run: pip install --only-binary :all: -r requirements-dev.txt
 
       - name: Install Node.js dependencies
         run: cd node.js && npm ci
