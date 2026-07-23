@@ -5,6 +5,8 @@ updates:
     directory: /
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: pip
     directories:
@@ -12,6 +14,8 @@ updates:
       - /python
     schedule:
       interval: daily
+    cooldown:
+      semver-minor-days: 7
     groups:
       dev-dependencies:
         dependency-type: development
@@ -21,6 +25,8 @@ updates:
     directory: /python
     schedule:
       interval: daily
+    cooldown:
+      semver-minor-days: 7
     groups:
       dev-dependencies:
         dependency-type: development
