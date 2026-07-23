@@ -60,7 +60,7 @@ jobs:
             echo "Creating new release..."
             create_release_url="https://api.github.com/repos/$TARGET_REPO/releases"
             create_release_payload=$(
-              printf '{"tag_name": "%s","name": "%s","body": "%s"}' \
+              printf '{"tag_name": "%s","name": "%s","body": "%s","target_commitish": "main"}' \
                 "$TARGET_RELEASE_TAG" "$TARGET_RELEASE_TITLE" "$RELEASE_NOTES")
             create_release_resp=$(
               curl -s -S -X POST -H "Authorization: Bearer ${{ steps.ksb-token.outputs.token }}" \
