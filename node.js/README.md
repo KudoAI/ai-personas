@@ -19,7 +19,7 @@
 
 <hr>
 
-> ### _1,300+ AI personas for LLMs and agents._
+> ### _1,400+ AI personas for LLMs and agents._
 
 It's just a [JSON file](https://cdn.jsdelivr.net/npm/@kudoai/ai-personas@1.3.0/dist/ai-personas.json), so you can use it in any environment.
 

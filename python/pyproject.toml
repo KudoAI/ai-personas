@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ai-personas"
 version = "1.13.0"
-description = "1,300+ AI personas for LLMs and agents."
+description = "1,400+ AI personas for LLMs and agents."
 authors = [
     { name = "KudoAI", email = "contact@kudoai.com" },
 ]
