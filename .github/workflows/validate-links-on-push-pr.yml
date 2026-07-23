@@ -9,6 +9,7 @@ on:
 
 jobs:
   linkinator:
+    if: ${{ github.event.head_commit.author.name != 'kudo-sync-bot' }} # skip auto bump commits containing future links
     runs-on: ubuntu-24.04
     permissions:
       contents: read
