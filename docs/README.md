@@ -1,3 +1,10 @@
+***
+
+> [!IMPORTANT]  
+> This project has migrated to **<https://codeberg.org/KudoAI/ai-personas>**
+
+***
+
 <a id="top"></a>
 
 <div align="center">
